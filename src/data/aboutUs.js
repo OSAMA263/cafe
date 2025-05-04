@@ -1,3 +1,5 @@
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+
 const history = [
   {
     date: "1998",
@@ -20,7 +22,7 @@ const special_text = {
 
 const team = [
   {
-    img: "",
+    img: "/member1.jpg",
     name: "Robert Fox",
     role: "Chef Assistant",
     media: [
@@ -30,7 +32,7 @@ const team = [
     ],
   },
   {
-    img: "",
+    img: "/member2.jpg",
     name: "Marvin McKinney",
     role: "Head chef",
     media: [
@@ -40,7 +42,7 @@ const team = [
     ],
   },
   {
-    img: "",
+    img: "/member3.jpg",
     name: "Savannah Nguyen",
     role: "Chef Assistant",
     media: [
@@ -50,7 +52,7 @@ const team = [
     ],
   },
   {
-    img: "",
+    img: "/member4.jpg",
     name: "Guy Hawkins",
     role: "Chef Assistant",
     media: [

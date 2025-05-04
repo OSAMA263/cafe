@@ -1,4 +1,4 @@
-export default function LoaderPage() {
+export default function Loader() {
   return (
     <div>LoaderPage</div>
   )

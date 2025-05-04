@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 export default function History() {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ translateX: "100%" }}
+      animate={{ translateX: "0%" }}
+      exit={{ translateX: "-100%" }}
+      transition={{ duration: 0.5 ,type:"tween"}}
       className="text-center space-y-20 text-pretty leading-relaxed"
     >
       {/* history */}
