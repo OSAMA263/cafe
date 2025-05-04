@@ -1,0 +1,35 @@
+@import "tailwindcss";
+/* global shit  */
+body {
+  button,
+  input,
+  textarea,
+  svg,
+  a,
+  img {
+    transition: all 0.3s;
+  }
+  input,
+  textarea {
+    outline: none;
+    resize: none;
+    &.form-input {
+      border: 1px solid gray;
+      padding: 8px 16px;
+      color: white;
+      &::placeholder {
+        color: rgba(172, 172, 172, 0.935);
+      }
+      &:hover,
+      &:focus {
+        border-color: var(--color-sky);
+      }
+    }
+  }
+}
+@theme {
+  --color-sky: #eff1f5;
+  --color-dark-blue: #0f1e3d;
+  --color-peach: #f97664;
+  --color-gray: #4a556c;
+}
