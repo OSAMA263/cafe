@@ -8,7 +8,7 @@ export default function BookingSection() {
         <h1 className="text-sky uppercase text-3xl font-semibold font-serif tracking-wider">
           MAKE A RESERVATION
         </h1>
-        <form className="space-y-16">
+        <form action="/contact" className="space-y-16">
           <div className="flex gap-x-4">
             <input
               className="form-input"

@@ -5,7 +5,7 @@ import LayoutContainer from "./LayoutContainer";
 
 export default function Header() {
   return (
-    <div className="border-b border-gray/15">
+    <div className="border-b border-gray/15 !mb-14">
       <LayoutContainer
         as="header"
         className="flex items-center justify-between "

@@ -26,6 +26,9 @@ body {
       }
     }
   }
+  .gap-between-elements {
+    @apply space-y-40;
+  }
 }
 @theme {
   --color-sky: #eff1f5;

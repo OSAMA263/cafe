@@ -9,7 +9,7 @@ export default function FollowUs() {
       <Hero title="follow on instagram" />
       <div className="flex justify-between flex-wrap gap-y-4">
         {images.map((src) => (
-          <img alt={src} src={src} />
+          <img key={src} src={src} alt={src} />
         ))}
       </div>
     </LayoutContainer>

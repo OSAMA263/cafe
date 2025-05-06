@@ -10,7 +10,7 @@ export default function Hero(props) {
   return (
     <div
       className={
-        "flex flex-col items-center justify-center gap-y-7 " + className
+        "flex flex-col items-center justify-center gap-y-10 " + className
       }
     >
       <h2 className="tracking-widest font-semibold text-gray">
@@ -26,7 +26,7 @@ export default function Hero(props) {
         )}
       </h1>
       {children}
-      {img && <img src={img} alt="hero image" className="object-cover" />}
+      {img && <img src={img} alt="hero image" className="object-cover w-full" />}
     </div>
   );
 }

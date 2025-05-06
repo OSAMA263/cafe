@@ -36,7 +36,7 @@ const TabContent = ({ content }) => {
       className="grid grid-cols-2 gap-x-10 items-center"
     >
       <img src={img} alt="img" className={key === "lunch" ? "ms-auto" : ""} />
-      <div className={`space-y-10 ${key === "lunch" ? "-order-1" : "order-2"}`}>
+      <div className={`space-y-20 ${key === "lunch" ? "-order-1" : "order-2"}`}>
         <h1 className="text-gray">{text}</h1>
         <Button to="/menu" variant={key === "lunch" ? "dark" : "light"}>
           See our menu
