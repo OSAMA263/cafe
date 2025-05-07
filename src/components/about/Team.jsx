@@ -8,9 +8,9 @@ export default function Team() {
   return (
     <LayoutContainer className="overflow-x-hidden">
       <motion.div
-        initial={{ translateX: "-100%" }}
+        initial={{ translateX: "-90%" }}
         animate={{ translateX: "0%" }}
-        exit={{ translateX: "100%" }}
+        exit={{ translateX: "90%" }}
         transition={{ duration: 0.5, type: "tween" }}
         className="grid grid-cols-4 gap-10"
       >

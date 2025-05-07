@@ -1,4 +1,5 @@
 import { iconMap } from "../data/icons";
+import AnimateElement from "./AnimateElement";
 import LayoutContainer from "./LayoutContainer";
 import Logo from "./Logo";
 import NavigationLinks from "./NavigationLinks";
@@ -18,32 +19,34 @@ const informations = [
 
 export default function Footer() {
   return (
-    <LayoutContainer
-      as="footer"
-      className="mt-32 flex flex-col items-center gap-16 pb-8"
-    >
-      <Logo />
-      {/* navlinks */}
-      <NavigationLinks />
-      {/* locations & working time */}
-      <div className="flex justify-between items-center w-full">
-        {informations.map((info) => (
-          <Contact_WorkingTime key={info.title} {...info} />
-        ))}
-      </div>
-      {/* medias */}
-      <div className="flex items-center gap-4">
-        {Object.keys(iconMap).map((key, i) => {
-          const Icon = iconMap[key];
-          return (
-            <Icon
-              key={i}
-              className="transition-all cursor-pointer text-white bg-gray hover:bg-dark-blue text-4xl p-2"
-            />
-          );
-        })}
-      </div>
-    </LayoutContainer>
+    <AnimateElement Y={false}>
+      <LayoutContainer
+        as="footer"
+        className="mt-32 flex flex-col items-center gap-16 pb-8"
+      >
+        <Logo />
+        {/* navlinks */}
+        <NavigationLinks />
+        {/* locations & working time */}
+        <div className="flex justify-between items-center w-full">
+          {informations.map((info) => (
+            <Contact_WorkingTime key={info.title} {...info} />
+          ))}
+        </div>
+        {/* medias */}
+        <div className="flex items-center gap-4">
+          {Object.keys(iconMap).map((key, i) => {
+            const Icon = iconMap[key];
+            return (
+              <Icon
+                key={i}
+                className="transition-all cursor-pointer text-white bg-gray hover:bg-dark-blue text-4xl p-2"
+              />
+            );
+          })}
+        </div>
+      </LayoutContainer>
+    </AnimateElement>
   );
 }
 

@@ -15,22 +15,21 @@ export default function Home() {
 
   return (
     <div className="gap-between-elements">
-        <Hero home img="/hero-home.jpg">
-          <Button variant="dark" to="/contact">
-            Reserve Today
-          </Button>
-        </Hero>
-      {/* about us tab switcher */}
+      <Hero home img="/hero-home.jpg">
+        <Button variant="dark" to="/contact">
+          Reserve Today
+        </Button>
+      </Hero>
       {/* tab toggler content */}
-      <TabSwitcher {...{ tabs, switchTab, setSwitchTab }} />
-      {/* displayed tab content */}
-      <AnimatePresence mode="wait">
-        {switchTab === "history" ? (
-          <History key="history" />
-        ) : (
-          <Team key="team" />
-        )}
-      </AnimatePresence>
+        <TabSwitcher {...{ tabs, switchTab, setSwitchTab }} />
+        {/* displayed tab content */}
+        <AnimatePresence mode="wait">
+          {switchTab === "history" ? (
+            <History key="history" />
+          ) : (
+            <Team key="team" />
+          )}
+        </AnimatePresence>
       {/* booking section */}
       <BookingSection />
       {/* special section */}

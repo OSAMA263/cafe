@@ -2,7 +2,8 @@ import Hero from "../components/Hero";
 import MenuSection from "../components/menu/MenuSection";
 import BookingSection from "../components/contact/BookingSection";
 import LayoutContainer from "../components/LayoutContainer";
-import Speciales from "../components/menu/Speciales"
+import Speciales from "../components/menu/Speciales";
+import AnimateElement from "../components/AnimateElement";
 
 export default function Menu() {
   const arr = Array.from({ length: 15 }, (_, i) => i + 1);
@@ -31,18 +32,18 @@ export default function Menu() {
         <Hero title="our tea and coffee" />
         <div className="grid grid-cols-4 gap-4">
           {fourArr().map((group, i) => (
-            <div key={i} className="space-y-2">
+            <AnimateElement i={i} key={i} className="space-y-2">
               {group.map((item) => (
                 <div key={item} className="p-4 border border-gray-300">
                   Item {item}
                 </div>
               ))}
-            </div>
+            </AnimateElement>
           ))}
         </div>
       </LayoutContainer>
       {/* our specials*/}
-      <Speciales/>
+      <Speciales />
     </div>
   );
 }
