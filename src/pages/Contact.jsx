@@ -15,7 +15,7 @@ export default function Contact() {
     <div className="gap-between-elements">
       <Hero title="Contact Us" />
       {/* locations and ways to get in contact */}
-      <LayoutContainer className="flex justify-between">
+      <LayoutContainer className="flex justify-between flex-wrap gap-6">
         {locations.map(({ name, info }, i) => (
           <AnimateElement key={name} i={i}>
             <div className="space-y-4 text-center text-2xl">
@@ -29,13 +29,13 @@ export default function Contact() {
       </LayoutContainer>
       {/* leave a message form */}
       <div className="bg-gray py-20">
-        <LayoutContainer className="flex flex-col items-center gap-10">
-          <AnimateElement className=" w-1/2 ">
+        <LayoutContainer className="flex flex-col max-md:w-full items-center gap-10">
+          <AnimateElement className="w-[80%]">
             <h1 className="text-sky uppercase text-center text-3xl font-semibold font-serif tracking-wider">
               leave us a message
             </h1>
             {/* form */}
-            <form className="space-y-8 flex flex-col">
+            <form className="space-y-8 flex  flex-col">
               <input
                 required
                 className="form-input"

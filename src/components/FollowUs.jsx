@@ -8,7 +8,7 @@ export default function FollowUs() {
   return (
     <LayoutContainer as="section" className="space-y-10" id="follow-us">
       <Hero title="follow on instagram" />
-      <div className="flex justify-between flex-wrap gap-y-4">
+      <div className="flex gap-4 flex-wrap justify-center">
         {images.map((src, i) => (
           <AnimateElement key={src} i={i}>
             <img src={src} alt={src} />

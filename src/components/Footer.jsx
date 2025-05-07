@@ -40,7 +40,7 @@ export default function Footer() {
             return (
               <Icon
                 key={i}
-                className="transition-all cursor-pointer text-white bg-gray hover:bg-dark-blue text-4xl p-2"
+                className="transition-all cursor-pointer text-white bg-gray hover:bg-dark-blue lg:text-4xl text-xl p-2"
               />
             );
           })}

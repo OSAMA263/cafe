@@ -14,10 +14,10 @@ export default function History() {
         className="text-center space-y-20 text-pretty leading-relaxed"
       >
         {/* history */}
-        <div className="grid grid-cols-3 items-center">
+        <div className="grid lg:grid-cols-3 items-center">
           {history.map(({ date, text }, i) => (
-            <AnimateElement key={i} i={i}>
-              <div className="border border-transparent transition-all px-10 py-7 hover:border-gray/20 text-center space-y-10">
+            <AnimateElement className="h-full" key={i} i={i}>
+              <div className="border border-transparent hover:border-gray/30 h-full transition-all xl:px-10 px-4 py-7 text-center space-y-10">
                 <h1 className="font-semibold text-5xl text-dark-blue font-serif">
                   {date}
                 </h1>

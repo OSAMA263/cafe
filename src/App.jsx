@@ -1,21 +1,17 @@
-import { lazy, Suspense, useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import FollowUs from "./components/FollowUs";
+import Loader from "./components/Loader";
 
 export default function App() {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, [location.pathname]);
-
+  
   return (
     <div className="gap-between-elements">
       <Header />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route element={<Home />} path="/"></Route>
           <Route element={<About />} path="/about"></Route>

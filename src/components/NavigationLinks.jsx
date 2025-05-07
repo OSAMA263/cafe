@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { navLinks } from "../data/navLinks";
 
-export default function NavigationLinks() {
+export default function NavigationLinks({ className="" }) {
   return (
     <nav>
       <ul className="flex items-center gap-4">
@@ -9,11 +9,11 @@ export default function NavigationLinks() {
           <li key={name}>
             <NavLink
               className={({ isActive }) =>
-                `py-12 px-8 font-semibold inline-block border-b text-gray/50 ${
+                `py-12 lg:px-8 px-4 font-semibold inline-block border-b text-gray/50 ${
                   isActive
                     ? "border-peach !text-dark-blue"
                     : "border-transparent hover:border-dark-blue hover:text-dark-blue"
-                }`
+                } ${className}`
               }
               to={href}
             >

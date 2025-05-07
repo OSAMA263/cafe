@@ -33,7 +33,7 @@ body {
     }
   }
   .gap-between-elements {
-    @apply space-y-40;
+    @apply lg:space-y-40 space-y-20;
   }
 }
 @theme {

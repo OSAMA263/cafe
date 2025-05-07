@@ -18,8 +18,8 @@ export default function MenuSection({ menu = "lunch" }) {
   ];
 
   return (
-    <LayoutContainer className="grid grid-cols-2 items-center ">
-      <AnimateElement i={1}>
+    <LayoutContainer className="grid sm:grid-cols-2 gap-6 items-center ">
+      <AnimateElement className="max-sm:hidden" i={1}>
         <img
           src={menu === "lunch" ? "/lunch-menu.jpg" : "/dinner-menu.jpg"}
           alt={menu}

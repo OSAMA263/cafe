@@ -6,12 +6,12 @@ export default function BookingSection() {
   return (
     <section id="booking" className="bg-gray py-28">
       <AnimateElement>
-        <LayoutContainer className="flex flex-col items-center gap-16">
-          <h1 className="text-sky uppercase text-3xl font-semibold font-serif tracking-wider">
+        <LayoutContainer className="max-md:w-full flex flex-col items-center gap-16">
+          <h1 className="text-sky text-center uppercase text-3xl font-semibold font-serif tracking-wider">
             MAKE A RESERVATION
           </h1>
-          <form action="/contact" className="space-y-16">
-            <div className="flex gap-x-4">
+          <form action="/contact" className="space-y-16 w-[80%]">
+            <div className="grid md:grid-cols-3 gap-4">
               <input
                 className="form-input"
                 required

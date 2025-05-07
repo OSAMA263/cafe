@@ -35,11 +35,11 @@ const TabContent = ({ content }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="flex gap-x-20 items-center *:flex-1"
+        className="md:flex lg:gap-x-20 gap-x-4 space-y-10 items-center *:flex-1 *:max-md:w-full"
       >
         <img src={img} alt="img" className={key === "lunch" ? "ms-auto" : ""} />
         <div
-          className={`space-y-20 ${key === "lunch" ? "-order-1" : "order-2"}`}
+          className={`md:space-y-20 space-y-10 ${key === "lunch" ? "-order-1" : "order-2"}`}
         >
           <h1 className="text-gray">{text}</h1>
           <Button to="/menu" variant={key === "lunch" ? "dark" : "light"}>

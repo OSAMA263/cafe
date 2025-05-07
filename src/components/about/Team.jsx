@@ -12,7 +12,7 @@ export default function Team() {
         animate={{ translateX: "0%" }}
         exit={{ translateX: "90%" }}
         transition={{ duration: 0.5, type: "tween" }}
-        className="grid grid-cols-4 gap-10"
+        className="grid xl:grid-cols-4 grid-cols-2 gap-10"
       >
         {team.map(({ img, name, role, media }) => (
           <div key={name} className="flex flex-col items-center gap-y-4">

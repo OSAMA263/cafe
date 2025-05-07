@@ -13,16 +13,16 @@ export default function Hero(props) {
   return (
     <div
       className={
-        "flex flex-col items-center justify-center gap-y-10 " + className
+        "flex flex-col text-center items-center justify-center gap-y-10 " + className
       }
     >
       <AnimateElement i={1}>
-        <h2 className="tracking-widest font-semibold text-gray">
+        <h2 className="tracking-widest font-semibold text-gray max-md:text-sm">
           QUALITY AND TRADITION
         </h2>
       </AnimateElement>
       <AnimateElement i={2}>
-        <h1 className="text-dark-blue text-7xl uppercase font-serif">
+        <h1 className="text-dark-blue xl:text-7xl md:text-5xl text-4xl uppercase font-serif">
           {home ? (
             <>
               testy <span className="text-peach">&</span> fresh

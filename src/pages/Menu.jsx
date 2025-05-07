@@ -34,7 +34,7 @@ export default function Menu() {
           {fourArr().map((group, i) => (
             <AnimateElement i={i} key={i} className="space-y-2">
               {group.map((item) => (
-                <div key={item} className="p-4 border border-gray-300">
+                <div key={item} className="p-4">
                   Item {item}
                 </div>
               ))}
