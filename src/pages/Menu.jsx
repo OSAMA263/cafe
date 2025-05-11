@@ -4,17 +4,21 @@ import BookingSection from "../components/contact/BookingSection";
 import LayoutContainer from "../components/LayoutContainer";
 import Speciales from "../components/menu/Speciales";
 import AnimateElement from "../components/AnimateElement";
+import { useEffect, useState } from "react";
+import { fourArr } from "../hooks/fourArray";
+import Loader from "../components/Loader";
+import { getData } from "../hooks/getData";
 
 export default function Menu() {
-  const arr = Array.from({ length: 15 }, (_, i) => i + 1);
+  const [data, setData] = useState([]);
 
-  const fourArr = () => {
-    let four = [];
-    for (let i = 0; i < arr.length; i += 4) {
-      four.push(arr.slice(i, i + 4));
-    }
-    return four;
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getData({ dataId: "tea_coffee" });
+      setData(result);
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className="gap-between-elements">
@@ -31,15 +35,22 @@ export default function Menu() {
       <LayoutContainer className="space-y-10">
         <Hero title="our tea and coffee" />
         <div className="grid grid-cols-4 gap-4">
-          {fourArr().map((group, i) => (
-            <AnimateElement i={i} key={i} className="space-y-2">
-              {group.map((item) => (
-                <div key={item} className="p-4">
-                  Item {item}
-                </div>
-              ))}
-            </AnimateElement>
-          ))}
+          {data.length > 0 ? (
+            fourArr(data).map((group, i) => (
+              <AnimateElement i={i} key={i} className="space-y-2">
+                {group.map((item) => (
+                  <div
+                    key={item.name}
+                    className="text-dark-blue p-4 border border-gray/20"
+                  >
+                    {item.name}
+                  </div>
+                ))}
+              </AnimateElement>
+            ))
+          ) : (
+            <Loader className="col-span-4" />
+          )}
         </div>
       </LayoutContainer>
       {/* our specials*/}

@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Button from "./Button";
 import NavigationLinks from "./NavigationLinks";
 import LayoutContainer from "./LayoutContainer";
@@ -9,7 +9,6 @@ import Logo from "./Logo";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useLocation();
-
   // close sidebar navigatoin on route change
   useEffect(() => {
     setIsOpen(false);
@@ -18,12 +17,12 @@ export default function Header() {
 
   // disable scroll when sidebar is open
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen ) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
-  }, [isOpen]);
+  }, [isOpen, ]);
 
   return (
     <div className="border-b border-gray/15 !mb-14 max-md:py-4">
@@ -31,7 +30,7 @@ export default function Header() {
         as="header"
         className="flex items-center justify-between"
       >
-        <Logo/>
+        <Logo />
 
         {/* large screens navbar */}
         <NavigationLinks className="max-md:hidden" />

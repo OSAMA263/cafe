@@ -3,4 +3,5 @@ export const navLinks = [
   { name: "About Us", href: "/about" },
   { name: "Menu", href: "/menu" },
   { name: "Contact Us", href: "/contact" },
+  { name: "Dashboard", href: "/dashboard" },
 ]
