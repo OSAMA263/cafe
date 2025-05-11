@@ -2,7 +2,7 @@ import AnimateElement from "./AnimateElement";
 import Hero from "./Hero";
 import LayoutContainer from "./LayoutContainer";
 
-const images = ["/footer1.jpg", "/footer2.jpg", "/footer3.jpg", "/footer4.jpg"];
+const images = ["footer1.jpg", "footer2.jpg", "footer3.jpg", "footer4.jpg"];
 
 export default function FollowUs() {
   return (

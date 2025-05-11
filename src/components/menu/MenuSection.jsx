@@ -20,7 +20,7 @@ export default function MenuSection({ menu = "lunch" }) {
     <LayoutContainer className="flex gap-10 items-center ">
       <AnimateElement className="max-lg:hidden" i={1}>
         <img
-          src={menu === "lunch" ? "/lunch-menu.jpg" : "/dinner-menu.jpg"}
+          src={menu === "lunch" ? "lunch-menu.jpg" : "dinner-menu.jpg"}
           alt={menu}
         />
       </AnimateElement>

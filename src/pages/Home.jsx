@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div className="gap-between-elements">
-      <Hero home img="/hero-home.jpg">
+      <Hero home img="hero-home.jpg">
         <Button variant="dark" to="/contact">
           Reserve Today
         </Button>
