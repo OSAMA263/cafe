@@ -2,6 +2,6 @@ import axios from "axios";
 import { API } from "../api/APIS";
 
 export const getData = async ({ dataId = "", id = "" }) => {
-  const res = await axios.get(`${API}${dataId}/${id}`);
+  const res = await axios.get(`${API}${dataId}${id ? `/${id}` : ""}`);
   return res.data;
 };

@@ -51,14 +51,14 @@ export default function Dashboard() {
             className="border p-2"
             type="text"
             name="name"
-            placeholder="name"
+            placeholder="admin"
           />
           <input
             required
             className="border p-2"
             type="password"
             name="password"
-            placeholder="password"
+            placeholder="admin"
           />
           <Button
             as="button"
