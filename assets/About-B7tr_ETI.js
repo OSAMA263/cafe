@@ -1,0 +1,1 @@
+import{j as s,H as e,a as t,B as a,T as o}from"./index-1femTsGQ.js";function r(){return s.jsxs("div",{className:"gap-between-elements",children:[s.jsx(e,{title:"about us",img:"/hero-about.jpg"}),s.jsx(t,{}),s.jsx(a,{}),s.jsx(o,{})]})}export{r as default};
